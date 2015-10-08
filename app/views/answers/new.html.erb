@@ -1,0 +1,21 @@
+<%= form_for @answer do |f| %>
+  <div>
+    Name: <%= f.text_field :name %>
+  </div>
+  <div>
+    Favorites:
+    <ul>
+      <%= render partial: check_box, locals: {f: f} %>
+      <li class="item">
+        <%= f.check_box :rainbows %> I like <%= f.label :rainbows %>
+      </li>
+      <li class="item">
+        <%= f.check_box :puppies %> I like <%= f.label :puppies %>
+      </li>
+      <li class="item">
+        <%= f.check_box :cold_hard_cash %> I like <%= f.label :cold_hard_cash %>
+      </li>
+    </ul>
+  </div>
+  <%= f.submit %>
+<% end %>
