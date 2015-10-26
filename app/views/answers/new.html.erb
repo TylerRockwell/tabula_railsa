@@ -5,17 +5,11 @@
   <div>
     Favorites:
     <ul>
-      <%= render partial: check_box, locals: {f: f} %>
-      <li class="item">
-        <%= f.check_box :rainbows %> I like <%= f.label :rainbows %>
-      </li>
-      <li class="item">
-        <%= f.check_box :puppies %> I like <%= f.label :puppies %>
-      </li>
-      <li class="item">
-        <%= f.check_box :cold_hard_cash %> I like <%= f.label :cold_hard_cash %>
-      </li>
+      <%= render partial: "check_box", locals: {form: f, field_name: :chocolate} %>
+      <%= render partial: "check_box", locals: {form: f, field_name: :rainbows} %>
+      <%= render partial: "check_box", locals: {form: f, field_name: :puppies} %>
+      <%= render partial: "check_box", locals: {form: f, field_name: :cold_hard_cash} %>
     </ul>
   </div>
-  <%= f.submit %>
+  <%= f.submit, onclick: "disable-me()" %>
 <% end %>

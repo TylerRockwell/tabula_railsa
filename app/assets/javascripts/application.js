@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function disable-me(this){
+  (this).prop("disabled", "true");
+  ('form').submit();
+}
